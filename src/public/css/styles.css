@@ -8,6 +8,11 @@
     font-family: 'Fira Code', monospace;
 }
 
+
+.accent-secondary {
+    color: #b2b2b2;
+}
+
 a,
 .custom-navbar {
     background-color: transparent;
@@ -39,6 +44,20 @@ a,
     border: 1px solid #EDA505;
     padding: 10px 40px;
     cursor: pointer;
+}
+
+
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (min-width: 1200px) {
+    /* XL screens */
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 .custom-navbar .custom-nav-link {
@@ -78,6 +97,89 @@ a,
     /* Slight background hover effect */
     color: #EDA505;
 }
+
+
+/* Experience Section Styling */
+.experience-section {
+   
+}
+
+/* Navigation (Left Column) Styling */
+.experience-nav {
+    border-left: 2px solid #8892b0;
+    /* Vertical line for the tabs */
+    padding-left: 20px;
+}
+
+.experience-nav .nav-link {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    color: #8892b0;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.experience-nav .nav-link.active {
+    color: #EDA505;
+    /* Highlighted tab */
+    font-weight: bold;
+}
+
+.experience-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #EDA505;
+    /* Active tab line */
+}
+
+/* Content Area (Right Column) */
+.experience-content h4 {
+    font-size: 1.25rem;
+    /* color: #ccd6f6; */
+    font-weight: bold;
+}
+
+.experience-content h4 .accent-text {
+    color: #EDA505;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-content ul li {
+    /* font-size: 1rem; */
+    /* color: #ccd6f6; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.experience-content ul li i {
+    margin-right: 10px;
+    /* font-size: 1.2rem; */
+    color: #EDA505;
+}
+
+.experience-content ul li:hover i {
+    transform: translateX(5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 .footer {
     text-align: center;
@@ -131,19 +233,17 @@ a,
 
 
 
-
 .image-container {
-    position: top;
+    position: relative;
+    /* Fixed from "top" to "relative" for correct positioning */
     width: 100%;
     /* Ensures responsiveness */
     max-width: 300px;
     /* Limit the size */
     aspect-ratio: 1 / 1;
     /* Forces square dimensions */
-    /* margin: auto; */
-    /* Centers the container */
-    border: 2px solid #EDA505;
-    border-radius: 5px;
+    border: 1px solid #EDA505;
+    border-radius: 10px;
     overflow: hidden;
     /* Ensures no overflow beyond square boundaries */
 }
@@ -153,22 +253,37 @@ a,
     /* Ensures the image fills the square without distortion */
     object-position: 50% 0%;
     /* Adjust to position the headshot correctly */
+    transform: scale(1.2);
     width: 100%;
     height: 100%;
+    filter: grayscale(100%);
+    /* Start with grayscale */
+    transition: transform 0.4s ease, filter 0.4s ease, object-position 0.4s ease;
+    /* Smooth transition for both scale and grayscale */
+}
+
+/* Add grayscale-to-color and enlargement on hover */
+.image-container:hover img {
+    object-position: 50% -5%;
+    transform: scale(1.3);
+    /* Slight enlargement */
+    filter: grayscale(20%);
+    /* Remove grayscale */
+    transition: object-position 0.4s ease, filter 0.4s ease, transform 0.4s ease;
 }
 
 /* Add a line underneath the image using ::after */
 .image-container::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -30px;
     /* Position the line just below the image */
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     /* Start with the line hidden */
-    width: 80%;
+    width: 30%;
     /* Width of the line */
-    height: 4px;
+    height: 1px;
     /* Thickness of the line */
     background-color: #EDA505;
     /* Line color */
@@ -185,18 +300,20 @@ a,
 
 
 
-.nav {
-    background-color: #8f8f8f;
-    position: fixed;
+
+.custom-navbar {
+    background-color: none;
+    position: fixed-top;
     width: 100%;
     z-index: 10;
 }
+
 
 p{
     /* font-family: 'Fira Sans', monospace; */
     /* Use a monospaced font for code */
     font-size: 1.1rem;
-    color: #f8faff;
+    color: #d1d1d1;
     /* Text color */
 }
 
@@ -206,7 +323,7 @@ p{
 
 .project-card {
     background-color: #112240;
-    color: #ccd6f6;
+    color: #d1d1d1;
     border: none;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -219,7 +336,8 @@ p{
 body {
     font-family: 'Arial', sans-serif;
     background-color: #757575;
-    color: #f8faff;
+    /* color: #f8faff; */
+    color: #d1d1d1;
     margin: 0;
     padding: 0;
 }
@@ -237,6 +355,42 @@ body {
     }
 }
 
+.section-header {
+    font-size: 2rem;
+    position: relative;
+    /* Needed for ::after positioning */
+    display: inline-block;
+    /* Ensure the line is only under the text */
+    color: #ccd6f6;
+    /* Adjust to match your design */
+}
+
+.section-header::after {
+    content: '';
+    /* Adds the line */
+    display: block;
+    /* Makes the line visible */
+    width: 150%;
+    /* Length of the line (adjust as needed) */
+    height: 1px;
+    /* Thickness of the line */
+    background-color: #8892b0;
+    /* Line color */
+    margin-top: 10px;
+    /* Space between the text and the line */
+    position: absolute;
+    left: calc(100% + 20px);
+    /* Moves the line to start just after the text */
+    top: 25%;
+    /* Aligns the line vertically with the text */
+    transform: translateY(-50%);
+    /* Ensures perfect vertical centering */
+}
+
+
 .text-justify {
     text-align: justify;
 }
+
+
+

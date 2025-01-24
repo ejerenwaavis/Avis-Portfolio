@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,14 @@
             margin: 0;
             padding: 0;
         }
+
         nav {
             background-color: #0a192f;
             position: fixed;
             width: 100%;
             z-index: 10;
         }
+
         .hero {
             height: 100vh;
             display: flex;
@@ -27,26 +30,32 @@
             align-items: center;
             text-align: center;
         }
+
         .hero h1 {
             font-size: 3rem;
         }
+
         .hero p {
             font-size: 1.25rem;
             margin: 1rem 0;
         }
+
         .projects {
             padding: 60px 20px;
         }
+
         .project-card {
             background-color: #112240;
             color: #ccd6f6;
             border: none;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+
         footer {
             text-align: center;
             padding: 20px 0;
@@ -55,11 +64,13 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">MyPortfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -75,7 +86,8 @@
     <div class="hero">
         <div>
             <h1 data-aos="fade-up">Hi, I'm [Your Name]</h1>
-            <p data-aos="fade-up" data-aos-delay="200">A passionate developer focused on building exceptional digital experiences.</p>
+            <p data-aos="fade-up" data-aos-delay="200">A passionate developer focused on building exceptional digital
+                experiences.</p>
             <a href="#projects" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="400">View My Work</a>
         </div>
     </div>
@@ -88,7 +100,8 @@
                     <div class="card project-card">
                         <div class="card-body">
                             <h5 class="card-title">Project One</h5>
-                            <p class="card-text">Description of Project One. Highlight key features and technologies used.</p>
+                            <p class="card-text">Description of Project One. Highlight key features and technologies
+                                used.</p>
                             <a href="#" class="btn btn-outline-primary">View Details</a>
                         </div>
                     </div>
@@ -97,7 +110,8 @@
                     <div class="card project-card">
                         <div class="card-body">
                             <h5 class="card-title">Project Two</h5>
-                            <p class="card-text">Description of Project Two. Highlight key features and technologies used.</p>
+                            <p class="card-text">Description of Project Two. Highlight key features and technologies
+                                used.</p>
                             <a href="#" class="btn btn-outline-primary">View Details</a>
                         </div>
                     </div>
@@ -106,7 +120,47 @@
         </div>
     </div>
 
-    <footer>
+    <div class="container my-5">
+        
+
+        <hr>
+
+
+        <div class="my-5 d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true">Home</button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false">Profile</button>
+                <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                    aria-selected="false" >Disabled</button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">Messages</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">Settings</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+                <div class="tab-pane fade bg-light py-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                    tabindex="0"> another visible content </div>
+                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                    tabindex="0">...</div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="my-5">
         <p>&copy; 2025 [Your Name]. Designed and Built with Passion.</p>
     </footer>
 
@@ -116,4 +170,5 @@
         AOS.init();
     </script>
 </body>
+
 </html>

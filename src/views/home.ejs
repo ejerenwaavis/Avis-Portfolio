@@ -1,132 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/header.ejs') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-
-<body>
-  <%- include('partials/navbar') %>
-    <div class="container">
-      <div class="hero">
-        <div class="text-start py-0">
-          <p class="accent-text" data-aos="fade-up">Hi, I am </p>
-          <h1 data-aos="fade-up" data-aos-delay="200" class="hero-title">Avis Ejerenwa</h1>
-          <h1 data-aos="fade-up" data-aos-delay="200" class="hero-subtitle">I love to build solutions for the web.</h1>
-          <p data-aos="fade-up" data-aos-delay="300" class="hero-caption"> <span class="accent-text">I am, </span> a software
-            engineer focused on developing modern web solutions and solving real-world problems with clean code.</p>
-          <a href="#projects" class="btn btn-accent-transparent mt-3" data-aos="fade-up" data-aos-delay="400">View My Work</a>
-        </div>
+  <div class="container">
+    <div class="hero">
+      <div class="text-start py-0">
+        <p class="accent-text" data-aos="fade-up">Hi, I am </p>
+        <h1 data-aos="fade-up" data-aos-delay="200" class="hero-title">Avis Ejerenwa</h1>
+        <h1 data-aos="fade-up" data-aos-delay="200" class="hero-subtitle">I love to build solutions for the web.</h1>
+        <p data-aos="fade-up" data-aos-delay="300" class="hero-caption"> <span class="accent-text">I am, </span> a
+          fulll stack web developer focused on developing modern web solutions and solving real-world problems with
+          clean code.</p>
+        <a href="#projects" class="btn btn-accent-transparent mt-3" data-aos="fade-up" data-aos-delay="400">View My
+          Work</a>
       </div>
     </div>
+  </div>
 
-    <section id="about" class="container py-5">
-      <div class="row align-items-center">
-        <!-- Left Column: Text Content -->
-        <div class="col-lg-8 text-justify mb-4 pe-5">
-          <h2 data-aos="fade-up"  class=" mb-4" ><span class="accent-text">01.</span> About Me</h2>
+  <section id="about" class="container mb-5">
+    <div class="">
+      <h2 data-aos="fade-up" class="mb-4 section-header"><span class="accent-text">01.</span> About Me</h2>
+    </div>
+    <div class="row align-items-center">
+      <!-- Left Column: Text Content -->
+      <div class="col-lg-8  mb-4 pe-md-3 pe-lg-4">
+        <div class="pe-5">
           <p data-aos="fade-up" data-aos-delay="100" class="mb-4">
-            Hello! My name is <span class="fw-bold">Avis Ejerenwa</span>, and I enjoy creating and developing solutions,
-            whether it’s improving real-life workflows or building utility applications that supercharge productivity.
-            My journey in software development began in 2009, when I learned Core Java at <span class="accent">MIIT</span>
-            to build a stock-keeping application for my dad's store, a project that sparked my passion for solving problems
-            through technology.
+            Hello! My name is <span class="fw-bold">Avis Ejerenwa</span>, and I’m a passionate <span
+              class="fw-bold">Software Engineer</span> who enjoys creating solutions that improve productivity and
+            streamline workflows.
+            My journey began in 2009, when I learned Core Java at <span class="accent">MIIT</span> to build a
+            stock-keeping
+            application for my dad's store—a project that sparked my passion for solving real-world problems through
+            technology.
           </p>
           <p data-aos="fade-up" data-aos-delay="150" class="mb-4">
-            Since then, I’ve had the privilege of working with <span class="accent">Triumph Courier Services</span>, a
-            last-mile package delivery provider in Atlanta,
-            where I developed a full-fledged Delivery Dashboard and other tools to streamline operations and boost
-            efficiency. I also collaborated with
-            <span class="accent">Paris Beauty and Hair Salon</span> to design and develop their website, featuring an
-            integrated scheduler for managing appointments and payments.
+            Over the years, I’ve had the privilege of working with companies like <span class="accent">Triumph Courier
+              Services</span>, where I built a comprehensive Delivery Dashboard, and <span class="accent">Paris Beauty
+              and
+              Hair Salon</span>, where I developed an appointment scheduler and payments-integrated website. Today, I
+            specialize in building scalable web applications, collaborating with cross-functional teams, and
+            leveraging
+            modern tools and technologies to deliver impactful solutions.
           </p>
-          <p data-aos="fade-up" data-aos-delay="200" class="mb-4">
-            Today, as an <span class="fw-bold">Experienced Software Engineer</span>, I specialize in building scalable,
-            high-performance software systems and user-centric web applications.
-            I have extensive experience in full stack development, Agile methodologies, and collaborating with
-            cross-functional teams to deliver innovative solutions.
-            My focus includes reducing technical debt, improving system performance, and staying at the forefront of
-            emerging technologies.
-          </p>
-          <p data-aos="fade-up" data-aos-delay="250">
+          <p data-aos="fade-up" data-aos-delay="200">
             Here are a few technologies and tools I’ve been working with recently:
           </p>
           <!-- Technologies List -->
           <div class="row">
             <div class="col-6">
               <ul class="list-unstyled">
-                <li data-aos="fade-up" data-aos-delay="100" class="mb-2"><i class="fas fa-chevron-right accent"></i> Java, JavaScript</li>
-                <li data-aos="fade-up" data-aos-delay="300" class="mb-2"><i class="fas fa-chevron-right accent"></i> HTML/CSS, Node.js</li>
-                <li data-aos="fade-up" data-aos-delay="500" class="mb-2"><i class="fas fa-chevron-right accent"></i> MongoDB</li>
-                <li data-aos="fade-up" data-aos-delay="700" class="mb-2"><i class="fas fa-chevron-right accent"></i> Git, GitHub</li>
+                <li data-aos="fade-up" data-aos-delay="100" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  Node.js
+                </li>
+                <li data-aos="fade-up" data-aos-delay="300" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  Java,
+                  JavaScript
+                </li>
+                <li data-aos="fade-up" data-aos-delay="500" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  MongoDB
+                </li>
+                <li data-aos="fade-up" data-aos-delay="700" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  Git,
+                  GitHub</li>
               </ul>
             </div>
             <div class="col-6">
               <ul class="list-unstyled">
-                <li data-aos="fade-up" data-aos-delay="200" class="mb-2"><i class="fas fa-chevron-right accent"></i> React, Bootstrap, Express.js</li>
-                <li data-aos="fade-up" data-aos-delay="400" class="mb-2"><i class="fas fa-chevron-right accent"></i> REST APIs</li>
-                <li data-aos="fade-up" data-aos-delay="600" class="mb-2"><i class="fas fa-chevron-right accent"></i> UI/UX Design (Figma, Adobe Suite)</li>
+                <li data-aos="fade-up" data-aos-delay="200" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  Bootstrap, Express.js</li>
+                <li data-aos="fade-up" data-aos-delay="400" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  HTML/CSS
+                  React,
+                  REST APIs
+                </li>
+                <li data-aos="fade-up" data-aos-delay="600" class="mb-2"><i class="fas fa-chevron-right accent"></i>
+                  UI/UX
+                  Design (Figma, Adobe Suite)
+                </li>
               </ul>
             </div>
           </div>
         </div>
-    
-        <!-- Right Column: Image -->
-        <div class="col-lg-4 text-center d-flex align-items-start">
-          <div class="position-relative w-100">
-            <div class="image-container">
-              <img
+      </div>
+
+
+      <!-- Right Column: Image -->
+      <div class="col-lg-4 text-center mt-n-5 d-flex align-items-start">
+        <div class="d-none-lg">
+          <br><br>
+        </div>
+        <div class="position-relative  w-100">
+          <div class="image-container m-auto">
+            <img
               src="https://lh3.googleusercontent.com/pw/AP1GczNTAC5slZlSOPomLNDR3x1j7mnkZ3YtIH-8JlnRLnp_07_eIc6LFoisSYZIYWmkL17U58X6xIVTu5j_g8h9M9T4inMbJ9HD57RPR7-W8hEZkWOCZHOcNSEiMGeIt5hWTe0j6BXojAFYhgHOs45kTIZteA=w684-h1049-s-no-gm?authuser=0"
               alt="Your Image" class="img-fluid rounded" />
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-    <div id="projects" class="projects">
-      <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up">Projects</h2>
-        <div class="row">
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card project-card">
-              <div class="card-body">
-                <h5 class="card-title">Project One</h5>
-                <p class="card-text">Description of Project One. Highlight key features and technologies used.</p>
-                <a href="#" class="btn btn-outline-primary">View Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card project-card">
-              <div class="card-body">
-                <h5 class="card-title">Project Two</h5>
-                <p class="card-text">Description of Project Two. Highlight key features and technologies used.</p>
-                <a href="#" class="btn btn-outline-primary">View Details</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <%- include('partials/footer') %>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-      <script src="/js/scripts.js"></script>
-</body>
+  <br><br><br>
 
-</html>
+
+
+
+
+
+
+  <section class="container mt-5 py-5" id="experience">
+    <div>
+      <h2 data-aos="fade-up" class="mb-4 section-header"><span class="accent-text">02.</span> Experience</h2>
+    </div>
+
+    <div class="d-flex align-items-start experience-section">
+      <!-- Left Column: Navigation -->
+      <div class="experience-nav">
+        <ul class="nav flex-column" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" id="tab-upstatement" data-bs-toggle="tab"
+              data-bs-target="#content-upstatement" type="button" role="tab" aria-controls="content-upstatement"
+              aria-selected="true">
+              ACED Division LLC
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="tab-apple" data-bs-toggle="tab" data-bs-target="#content-apple" type="button"
+              role="tab" aria-controls="content-apple" aria-selected="false">
+              Apple
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="tab-scout" data-bs-toggle="tab" data-bs-target="#content-scout" type="button"
+              role="tab" aria-controls="content-scout" aria-selected="false">
+              Scout Studio
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Tab Content -->
+      <div class="tab-content experience-content ms-4">
+        <!-- Upstatement Tab -->
+        <div class="tab-pane fade show active" id="" role="tabpanel" aria-labelledby="tab-triumph-courier">
+          <h4>Freelance Full Stack Web Developer and Graphics Designer <span class=""><a target="_blank"
+                class="nav accent" href="https://triumphcourier.com/test">@triumphcourier</a></span></h4>
+          <p class="accent-secondary experience-date">Nov 2009 - Present</p>
+          <ul>
+            <li><i class="fas fa-chevron-right accent"></i>
+              Developed and maintain the Management Dashboard to
+              monitor delivery fleet progress, handle scheduling, and
+              manage user access to utility applications for D&amp;S
+              Unlimited LLC - GA (DBA - Triumh Courier Services).
+            </li>
+            <li><i class="fas fa-chevron-right accent"></i> Created the Routing Assistant web app using Node.js,
+              Bootstrap, and JavaScript, saving over 300 hours/week
+              by optimizing route planning.</li>
+            <li><i class="fas fa-chevron-right accent"></i> Developed the Smart Stop Web App using HERE Maps
+              API and MongoDB to provide controlled access to gated
+              entrances, reducing undelivered packages due to
+              secured entrance issues.
+            </li>
+            
+            <li><i class="fas fa-chevron-right accent"></i> Designed and developed the Job Opening and Job application application flow for aspiring and new employees at <span
+              href="https://triumphcourier.com/career/apply/deliverDriver" class=""></span> <span
+              class="accent">triumphcourier.com/career</span>
+            </li>
+
+            <li><i class="fas fa-chevron-right accent"></i> Designed and developed the Paris Beauty &amp; Hair Studio
+            booking web application.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Apple Tab -->
+        <div class="tab-pane fade" id="content-apple" role="tabpanel" aria-labelledby="tab-apple">
+          <h4>Software Engineer <span class="accent-text">@ Apple</span></h4>
+          <p class="text-muted">2015 – 2018</p>
+          <ul>
+            <li><i class="fas fa-chevron-right accent"></i> Placeholder content for Apple.</li>
+          </ul>
+        </div>
+
+        <!-- Scout Studio Tab -->
+        <div class="tab-pane fade" id="content-scout" role="tabpanel" aria-labelledby="tab-scout">
+          <h4>Developer <span class="accent-text">@ Scout Studio</span></h4>
+          <p class="text-muted">2012 – 2015</p>
+          <ul>
+            <li><i class="fas fa-chevron-right accent"></i> Placeholder content for Scout Studio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="container mt-5 py-5" id="work">
+    <div>
+      <h2 data-aos="fade-up" class="mb-4 section-header"><span class="accent-text">03.</span> Other Projects</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="card-title">Project One</h5>
+            <p class="card-text">Description of Project One. Highlight key features and technologies used.</p>
+            <a href="#" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card project-card">
+          <div class="card-body">
+            <h5 class="card-title">Project Two</h5>
+            <p class="card-text">Description of Project Two. Highlight key features and technologies used.</p>
+            <a href="#" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
