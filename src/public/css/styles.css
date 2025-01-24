@@ -1,27 +1,23 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #757575;
-    color: #f8faff;
-    margin: 0;
-    padding: 0;
+.accent {
+    color: #EDA505;
 }
 
-nav {
-    background-color: #8f8f8f;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+.accent-text {
+    color: #EDA505;
+    /* Accent color */
+    font-family: 'Fira Code', monospace;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+a,
+.custom-navbar {
+    background-color: transparent;
+    font-family: 'Fira Code', monospace;
+    /* Use a monospaced font for the numbered links */
+    font-size: 1rem;
+    padding: 10px 20px;
 }
 
-.btn-accent{
+.btn-accent {
     background-color: #eda305ab;
     color: #f8faff;
     border: none;
@@ -29,7 +25,7 @@ nav {
     cursor: pointer;
 }
 
-.btn-accent-secondary{
+.btn-accent-secondary {
     background-color: #f8faff;
     color: #EDA505;
     border: none;
@@ -37,81 +33,12 @@ nav {
     cursor: pointer;
 }
 
-.btn-accent-transparent{
+.btn-accent-transparent {
     background-color: transparent;
     color: #EDA505;
     border: 1px solid #EDA505;
     padding: 10px 40px;
     cursor: pointer;
-}
-
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin: 1rem 0;
-}
-
-.hero-title {
-    font-family: 'Inter', sans-serif;
-    /* Or any bold sans-serif font */
-    font-weight: 800;
-    /* Adjust for extra boldness */
-    color: #ccd6f6;
-    /* Matches the light blue tone */
-    font-size: 5.5rem;
-    /* Adjust size as needed */
-    /* line-height: 1.2; */
-    /* Adjust spacing between lines */
-}
-
-.hero-subtitle {
-    font-family: 'Inter', sans-serif;
-    /* Same font for consistency */
-    font-weight: 800;
-    /* Slightly less bold than the title */
-    color: #b1b1b3;
-    /* Subtle grayish-blue tone */
-    font-size: 2rem;
-    /* Slightly smaller size */
-    /* line-height: 1.5; */
-    /* Add more spacing for readability */
-}
-
-.projects {
-    padding: 60px 20px;
-}
-
-.project-card {
-    background-color: #112240;
-    color: #ccd6f6;
-    border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #0a192f;
-    color: #8892b0;
-}
-
-
-/* Navbar Styling */
-a, .custom-navbar {
-    background-color: transparent;
-    font-family: 'Fira Code', monospace;
-    /* Use a monospaced font for the numbered links */
-    font-size: 1rem;
-    padding: 10px 20px;
 }
 
 .custom-navbar .custom-nav-link {
@@ -152,6 +79,151 @@ a, .custom-navbar {
     color: #EDA505;
 }
 
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0a192f;
+    color: #8892b0;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    /* Same font for consistency */
+    font-weight: 800;
+    /* Slightly less bold than the title */
+    color: #b1b1b3;
+    /* Subtle grayish-blue tone */
+    font-size: 2rem;
+    /* Slightly smaller size */
+    /* line-height: 1.5; */
+    /* Add more spacing for readability */
+}
+
+.hero-title {
+    font-family: 'Inter', sans-serif;
+    /* Or any bold sans-serif font */
+    font-weight: 800;
+    /* Adjust for extra boldness */
+    color: #ccd6f6;
+    /* Matches the light blue tone */
+    font-size: 5.5rem;
+    /* Adjust size as needed */
+    /* line-height: 1.2; */
+    /* Adjust spacing between lines */
+}
+
+
+
+
+.image-container {
+    position: top;
+    width: 100%;
+    /* Ensures responsiveness */
+    max-width: 300px;
+    /* Limit the size */
+    aspect-ratio: 1 / 1;
+    /* Forces square dimensions */
+    /* margin: auto; */
+    /* Centers the container */
+    border: 2px solid #EDA505;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Ensures no overflow beyond square boundaries */
+}
+
+.image-container img {
+    object-fit: cover;
+    /* Ensures the image fills the square without distortion */
+    object-position: 50% 0%;
+    /* Adjust to position the headshot correctly */
+    width: 100%;
+    height: 100%;
+}
+
+/* Add a line underneath the image using ::after */
+.image-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    /* Position the line just below the image */
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    /* Start with the line hidden */
+    width: 80%;
+    /* Width of the line */
+    height: 4px;
+    /* Thickness of the line */
+    background-color: #EDA505;
+    /* Line color */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth animation on hover */
+}
+
+/* Hover effect to animate the line */
+.image-container:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Expand the line on hover */
+}
+
+
+
+
+.nav {
+    background-color: #8f8f8f;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+p{
+    /* font-family: 'Fira Sans', monospace; */
+    /* Use a monospaced font for code */
+    font-size: 1.1rem;
+    color: #f8faff;
+    /* Text color */
+}
+
+.projects {
+    padding: 60px 20px;
+}
+
+.project-card {
+    background-color: #112240;
+    color: #ccd6f6;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #757575;
+    color: #f8faff;
+    margin: 0;
+    padding: 0;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .custom-navbar .custom-nav-link {
@@ -165,12 +237,6 @@ a, .custom-navbar {
     }
 }
 
-.accent-text {
-    color: #EDA505;
-    /* Accent color */
-    font-family: 'Fira Code', monospace;
-}
-
-.accent{
-    color: #EDA505;
+.text-justify {
+    text-align: justify;
 }
