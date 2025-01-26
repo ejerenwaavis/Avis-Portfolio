@@ -322,7 +322,7 @@ body {
 
 
 .project-description {
-    background-color: rgba(71, 71, 71, 0.7);
+    background-color: rgba(73, 73, 73, 0.7);
     /* Semi-transparent black */
     backdrop-filter: blur(40px);
     /* Adds a blur effect */
@@ -333,6 +333,14 @@ body {
 }
 
 
+#noteworthy-projects .project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#noteworthy-projects .project-card:hover {
+    transform: translateY(-6px) scale(1.06);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
 
 
@@ -424,6 +432,10 @@ body {
 
 .text-normal {
     font-family: 'Inter', sans-serif;
+}
+
+.text-body {
+    color: #d1d1d1 !important;
 }
 
 @media (max-width: 992px) {
