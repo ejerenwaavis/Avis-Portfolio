@@ -70,6 +70,7 @@ body {
     padding-right: 10%;
 }
 
+
 .custom-navbar {
     background-color: none;
     position: fixed-top;
@@ -388,13 +389,13 @@ body {
 .social-sidebar::after {
     content: '';
     display: block;
-    width: 600%;
+    width: 1200%;
     height: 1px;
     background-color: #8892b0;
     position: fixed;
     transform: translateY(-100%) rotate(90deg);
-    top: calc(250% + 30px);
-    left: calc(-250%);
+    top: calc(440% + 30px);
+    left: calc(-552%);
 }
 
 
@@ -427,7 +428,7 @@ body {
 .sidebar::after {
     content: '';
     display: block;
-    width: 100%;
+    width: 300%;
     height: 1px;
     background-color: #8892b0;
     margin-top: 10px;
@@ -439,7 +440,7 @@ body {
 
 .section-header {
     margin-top: 50px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     font-weight: 600;
     display: inline-block;
@@ -449,12 +450,12 @@ body {
 .section-header::after {
     content: '';
     display: block;
-    width: 80%;
+    width: 60%;
     height: 1px;
     background-color: #8892b0;
     margin-top: 10px;
     position: absolute;
-    left: calc(100% + 20px);
+    left: calc(100% + 10px);
     top: 25%;
     transform: translateY(-50%);
 }
