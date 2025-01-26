@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const publuicPath = path.join(__dirname, 'public');
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -42,5 +44,20 @@ app.use((req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    outputLog(`Server is running on http://localhost:${PORT}`);
+    outputLog(publuicPath);
+
 });
+
+
+
+
+
+
+
+
+// helper functions
+
+function outputLog(message) {
+    console.log(new Date().toLocaleString({ dateStyle: 'short', timeStyle: 'short' }), '--->', message);
+}
