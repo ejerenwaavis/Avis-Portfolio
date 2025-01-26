@@ -1,3 +1,16 @@
+const SERVER = !(process.execPath.includes("C:"));//process.env.PORT;
+if (!SERVER){
+  // console.error(SERVER);
+  require("dotenv").config();
+}
+
+
+/*********Handling Server / Local Enviromnemnt sensitive variables************/
+const APP_DIRECTORY = !(SERVER) ? "" : ((process.env.APP_DIRECTORY) ? (process.env.APP_DIRECTORY) : "");
+const PUBLIC_FOLDER = (SERVER) ? "./" : "../";
+
+
+
 const express = require('express');
 const path = require('path');
 
@@ -22,17 +35,17 @@ app.set('view engine', 'ejs');
 
 // Routes
 // Home route
-app.get('/', (req, res) => {
+app.get(APP_DIRECTORY+'/', (req, res) => {
     res.render('home', { title: 'Home', domain:publicPath });
 });
 
 // About route
-app.get('/404', (req, res) => {
+app.get(APP_DIRECTORY+'/404', (req, res) => {
     res.render('partials/404', { title: 'Page Not Found',  domain:publicPath });
 });
 
 // Resume route to download PDF
-app.get('/resume', (req, res) => {
+app.get(APP_DIRECTORY+'/resume', (req, res) => {
     const resumePath = path.join(__dirname, 'public', 'resume.pdf');
     res.download(resumePath, 'resume.pdf', (err) => {
         if (err) {
@@ -50,6 +63,7 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     outputLog(`Server is running on http://localhost:${PORT}`);
     outputLog(path.join(__dirname, 'public'));
+    outputLog('APP DIR: ' + APP_DIRECTORY);
 });
 
 // Helper functions
