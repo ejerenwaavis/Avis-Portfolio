@@ -59,6 +59,7 @@ app.use((req, res) => {
     res.status(404).render('partials/404', { title: '404 - Page Not Found', domain:publicPath });
 });
 
+
 // Start the server
 app.listen(PORT, () => {
     outputLog(`Server is running on http://localhost:${PORT}`);
