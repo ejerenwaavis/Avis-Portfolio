@@ -368,14 +368,21 @@ body {
 /* Email Sidebar */
 .email-sidebar {
     position: fixed;
-    right: 20px;
-    bottom: 10%;
+    right: -70px;
+    bottom: 25%;
     transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 992px) {
+    .email-sidebar {
+        display: none;
+    }
 }
 
 .email-sidebar a {
     color: #ccd6f6;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
