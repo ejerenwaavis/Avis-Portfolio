@@ -36,7 +36,12 @@ app.set('view engine', 'ejs');
 // Routes
 // Home route
 app.get(APP_DIRECTORY+'/', (req, res) => {
-    res.render('home', { title: 'Home', domain:APP_DIRECTORY });
+    res.render('home', { 
+        title: 'Home', 
+        domain:APP_DIRECTORY,
+        SERVER:SERVER,
+        PUBLIC_FOLDER:PUBLIC_FOLDER 
+    });
 });
 
 // About route
@@ -44,15 +49,6 @@ app.get(APP_DIRECTORY+'/404', (req, res) => {
     res.render('partials/404', { title: 'Page Not Found',  domain:APP_DIRECTORY });
 });
 
-// Resume route to download PDF
-app.get(APP_DIRECTORY+'/resume', (req, res) => {
-    const resumePath = path.join(__dirname, 'public', 'resume.pdf');
-    res.download(resumePath, 'resume.pdf', (err) => {
-        if (err) {
-            console.error('Error downloading resume:', err);
-        }
-    });
-});
 
 // Handle 404 errors
 app.use((req, res) => {
