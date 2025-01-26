@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
 });
 
 // About route
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'About' });
+app.get('/404', (req, res) => {
+    res.render('partials/404', { title: 'About' });
 });
 
 // Resume route to download PDF
