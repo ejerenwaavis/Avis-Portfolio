@@ -36,12 +36,12 @@ app.set('view engine', 'ejs');
 // Routes
 // Home route
 app.get(APP_DIRECTORY+'/', (req, res) => {
-    res.render('home', { title: 'Home', domain:publicPath });
+    res.render('home', { title: 'Home', domain:APP_DIRECTORY });
 });
 
 // About route
 app.get(APP_DIRECTORY+'/404', (req, res) => {
-    res.render('partials/404', { title: 'Page Not Found',  domain:publicPath });
+    res.render('partials/404', { title: 'Page Not Found',  domain:APP_DIRECTORY });
 });
 
 // Resume route to download PDF
@@ -56,7 +56,7 @@ app.get(APP_DIRECTORY+'/resume', (req, res) => {
 
 // Handle 404 errors
 app.use((req, res) => {
-    res.status(404).render('partials/404', { title: '404 - Page Not Found', domain:publicPath });
+    res.status(404).render('partials/404', { title: '404 - Page Not Found', domain:APP_DIRECTORY });
 });
 
 
