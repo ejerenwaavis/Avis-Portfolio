@@ -52,7 +52,12 @@ app.get(APP_DIRECTORY+'/404', (req, res) => {
 
 // Handle 404 errors
 app.use((req, res) => {
-    res.status(404).render('partials/404', { title: '404 - Page Not Found', domain:APP_DIRECTORY });
+    res.status(404).render('partials/404', { 
+        title: '404 - Page Not Found', 
+        domain:APP_DIRECTORY,
+        SERVER:SERVER,
+        PUBLIC_FOLDER:PUBLIC_FOLDER  
+    });
 });
 
 
