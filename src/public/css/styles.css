@@ -486,3 +486,17 @@ body {
         margin-top: 10px;
     }
 }
+
+
+.hoh {
+    display: block;
+    transition: all 2.3s ease-in-out;
+}
+
+.vwoh:hover .hoh {
+    display: none;
+    transition: all 2.3s ease-in-out;
+    /* z-index: 3; */
+}
+
+
