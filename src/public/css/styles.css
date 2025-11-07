@@ -333,16 +333,31 @@ body {
     /* Slight enlargement on hover */
 }
 
+/* ✅ When video is playing: keep it “hovered” (color & scale) */
+.project-link.is-playing .project-image-container {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
 
 .project-description {
     background-color: rgba(73, 73, 73, 0.7);
     /* Semi-transparent black */
     backdrop-filter: blur(40px);
     /* Adds a blur effect */
+
+    transition: 1s ease;
 }
 
 .project-description-container {
     z-index: 1;
+}
+
+/* Utility class used when a video plays to hide the project description cleanly */
+.project-hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 
